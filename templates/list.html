@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tweets List</title>
+</head>
+<body>
+
+    <h1>All Tweets</h1>
+
+    {% for tweet in tweets %}
+        <hr>
+        <h2><strong>{{ tweet.user }}</strong></h2>
+        <p>
+            <strong>Content:</strong> {{ tweet.content }}
+        </p>
+        <p>
+            <strong>Posted:</strong> {{ tweet.created_at }}<br>
+            <strong>Updated:</strong> {{ tweet.updated_at }}
+        </p>
+    {% endfor %}
+
+
+</body>
+</html>
