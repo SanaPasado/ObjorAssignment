@@ -12,13 +12,6 @@ class TweetListView(ListView):
     context_object_name = 'tweets'
     queryset = Tweet.objects.all().order_by('-created_at')
 
-    def get_context_data(self, **kwargs):
-        # First, get the default context from the parent class
-        context = super().get_context_data(**kwargs)
-        # Then, add the history records to that context
-        context['history_records'] = History.objects.all().order_by('-date')
-        return context
-
 
 class TweetDetailView(DetailView):
     model = Tweet

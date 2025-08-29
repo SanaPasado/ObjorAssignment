@@ -8,17 +8,17 @@
         <th>Summary</th>
     </tr>
 
-    {% for record in histories %}
+    {% for history in histories %}
     <tr>
-        <td>{{ record.user.username }}</td>
-        <td>{{ record.method }}</td>
-        <td>{{ record.tweet.content }}</td>
-        <td>{{ record.date }}</td>
-        <td>{{ record.summary }}</td>
+        <td>{{ history.user.username }}</td>
+        <td>{{ history.method }}</td>
+        <td>{{ history.tweet.content }}</td>
+        <td>{{ history.date }}</td>
+        <td>{{ history.summary }}</td>
     </tr>
     {% empty %}
     <tr>
-        <td colspan="5">No history records yet.</td>
+        <td colspan="5">No history yet.</td>
     </tr>
     {% endfor %}
 </table>
